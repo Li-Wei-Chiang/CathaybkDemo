@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Rate Information</title>
+</head>
+<body>
+    <h2>匯率資訊</h2>
+	<table border="1">
+	    <tr>
+	        <th>ID</th>
+	        <th>貨幣代碼</th>
+	        <th>貨幣符號</th>
+	        <th>貨幣名稱</th>
+	        <th>貨幣中文</th>
+	        <th>匯率</th>
+	        <th>更新時間</th>
+	    </tr>
+	    <tr th:each="currency : ${currencys}">
+	        <td th:text="${currency.id}"></td>
+	        <td th:text="${currency.code}"></td>
+	        <td th:text="${currency.symbol}"></td>
+	        <td th:text="${currency.description}"></td>
+	        <td th:text="${currency.chinese_name}"></td>
+	        <td th:text="${currency.rate}"></td>
+	        <td th:text="${currency.update_time}"></td>
+	    </tr>
+	</table>
+</body>
+</html>
